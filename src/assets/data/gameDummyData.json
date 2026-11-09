@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "name": "The Witcher 3: Wild Hunt",
+        "rating": 4.8,
+        "releasedDate": "2015-05-19",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coaarl.jpg",
+        "platforms": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"]
+    },
+    {
+        "id": 2,
+        "name": "Elden Ring",
+        "rating": 4.9,
+        "releasedDate": "2022-02-25",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co4jni.jpg",
+        "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X/S"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Cyberpunk 2077",
+        "rating": 4.1,
+        "releasedDate": "2020-12-10",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coaih8.jpg",
+        "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X/S"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Red Dead Redemption 2",
+        "rating": 4.9,
+        "releasedDate": "2018-10-26",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co1q1f.jpg",
+        "platforms": ["PC", "PlayStation 4", "Xbox One"]
+    },
+    {
+        "id": 5,
+        "name": "The Legend of Zelda: Tears of the Kingdom",
+        "rating": 4.9,
+        "releasedDate": "2023-05-12",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co5vmg.jpg",
+        "platforms": ["Nintendo Switch"]
+    },
+    {
+        "id": 6,
+        "name": "God of War Ragnarök",
+        "rating": 4.8,
+        "releasedDate": "2022-11-09",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coba3d.jpg",
+        "platforms": ["PC", "PlayStation 4", "PlayStation 5"]
+    },
+    {
+        "id": 7,
+        "name": "Grand Theft Auto V",
+        "rating": 4.7,
+        "releasedDate": "2013-09-17",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co2lbd.jpg",
+        "platforms": [
+            "PC",
+            "PlayStation 3",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox 360",
+            "Xbox One",
+            "Xbox Series X/S"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Hollow Knight",
+        "rating": 4.7,
+        "releasedDate": "2017-02-24",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/cobfzp.jpg",
+        "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch",
+            "macOS",
+            "Linux"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Baldur's Gate 3",
+        "rating": 4.9,
+        "releasedDate": "2023-08-03",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co670h.jpg",
+        "platforms": ["PC", "PlayStation 5", "Xbox Series X/S", "macOS"]
+    },
+    {
+        "id": 10,
+        "name": "Persona 5 Royal",
+        "rating": 4.8,
+        "releasedDate": "2019-10-31",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coclf1.jpg",
+        "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X/S",
+            "Nintendo Switch"
+        ]
+    }
+]
