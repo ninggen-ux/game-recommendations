@@ -1,3 +1,18 @@
+$colors: (
+    text-primary: #ffffff,
+    text-secondary: #9ca3af,
+    card-bg: #1e2028,
+    card-bg-hover: #262934,
+    accent-rating: #4ade80,
+    badge-bg: rgba(255, 255, 255, 0.08),
+);
+
+:root {
+    @each $name, $value in $colors {
+        --#{$name}: #{$value};
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

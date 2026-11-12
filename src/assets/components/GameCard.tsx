@@ -1,4 +1,6 @@
 import { Component, type ReactNode } from "react";
+import Platform from "./Platform.tsx";
+import "../scss/game-list.scss";
 
 interface GameCardProps {
     name: string;
@@ -25,7 +27,9 @@ export default class GameCard extends Component<GameCardProps> {
                     <div>
                         <p>{rating}</p>
                         <p>{releasedDate}</p>
-                        <p>{platforms[0]}</p>
+                        {platforms.map((item, index) => {
+                            return <Platform key={index} platform={item} />;
+                        })}
                     </div>
                 </div>
             </div>
