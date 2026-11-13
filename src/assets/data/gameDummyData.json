@@ -1,70 +1,90 @@
 [
     {
         "id": 1,
-        "name": "The Witcher 3: Wild Hunt",
-        "rating": 4.8,
-        "releasedDate": "2015-05-19",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coaarl.jpg",
-        "platforms": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"]
+        "name": "War Thunder",
+        "rating": 4.2,
+        "releasedDate": "2012-11-01",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p78.webp",
+        "platforms": [
+            "PC",
+            "PlayStation 4",
+            "PlayStation 5",
+            "Xbox One",
+            "Xbox Series X/S",
+            "macOS",
+            "Linux"
+        ],
+        "genre": ["Vehicular Combat", "Simulation", "MMO"],
+        "description": "Engage in massive cross-platform military battles across air, land, and sea, piloting thousands of historically accurate aircraft, tanks, and naval vessels from the early 20th century to the modern era."
     },
     {
         "id": 2,
         "name": "Elden Ring",
         "rating": 4.9,
         "releasedDate": "2022-02-25",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co4jni.jpg",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.jpg",
         "platforms": [
             "PC",
             "PlayStation 4",
             "PlayStation 5",
             "Xbox One",
             "Xbox Series X/S"
-        ]
+        ],
+        "genre": ["Action RPG", "Soulslike", "Open World"],
+        "description": "Journey through the Lands Between to repair the Elden Ring and become the Elden Lord in a vast dark fantasy world crafted by Hidetaka Miyazaki and George R.R. Martin."
     },
     {
         "id": 3,
         "name": "Cyberpunk 2077",
         "rating": 4.1,
         "releasedDate": "2020-12-10",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coaih8.jpg",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaih8.jpg",
         "platforms": [
             "PC",
             "PlayStation 4",
             "PlayStation 5",
             "Xbox One",
             "Xbox Series X/S"
-        ]
+        ],
+        "genre": ["Action RPG", "Sci-Fi", "Open World"],
+        "description": "Step into the shoes of V, a cyber-enhanced mercenary fighting for survival in Night City, a megalopolis obsessed with power, glamour, and body modification."
     },
     {
         "id": 4,
         "name": "Red Dead Redemption 2",
         "rating": 4.9,
         "releasedDate": "2018-10-26",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co1q1f.jpg",
-        "platforms": ["PC", "PlayStation 4", "Xbox One"]
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1q1f.jpg",
+        "platforms": ["PC", "PlayStation 4", "Xbox One"],
+        "genre": ["Action-Adventure", "Open World", "Western"],
+        "description": "Follow outlaw Arthur Morgan and the Van der Linde gang as they rob, fight, and struggle to survive across the rugged heartland of America at the end of the Wild West era."
     },
     {
         "id": 5,
         "name": "The Legend of Zelda: Tears of the Kingdom",
         "rating": 4.9,
         "releasedDate": "2023-05-12",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co5vmg.jpg",
-        "platforms": ["Nintendo Switch"]
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5vmg.jpg",
+        "platforms": ["Nintendo Switch"],
+        "genre": ["Action-Adventure", "Open World", "Puzzle"],
+        "description": "Explore the vast lands and floating sky islands of Hyrule as Link, harnessing creative new abilities to build vehicles, fuse weapons, and uncover the truth behind a cataclysmic threat."
     },
     {
         "id": 6,
         "name": "God of War Ragnarök",
         "rating": 4.8,
         "releasedDate": "2022-11-09",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coba3d.jpg",
-        "platforms": ["PC", "PlayStation 4", "PlayStation 5"]
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/coba3d.jpg",
+        "platforms": ["PC", "PlayStation 4", "PlayStation 5"],
+        "genre": ["Action-Adventure", "Hack and Slash"],
+        "description": "Embark on a mythic journey across the Nine Realms with Kratos and Atreus as they seek answers and allies before the prophesied battle that will end the world."
     },
     {
         "id": 7,
         "name": "Grand Theft Auto V",
         "rating": 4.7,
         "releasedDate": "2013-09-17",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co2lbd.jpg",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbd.jpg",
         "platforms": [
             "PC",
             "PlayStation 3",
@@ -73,14 +93,16 @@
             "Xbox 360",
             "Xbox One",
             "Xbox Series X/S"
-        ]
+        ],
+        "genre": ["Action-Adventure", "Open World", "Crime"],
+        "description": "Switch between three distinct criminals—Michael, Franklin, and Trevor—as they pull off daring heists and navigate the ruthless underworld of Los Santos."
     },
     {
         "id": 8,
         "name": "Hollow Knight",
         "rating": 4.7,
         "releasedDate": "2017-02-24",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/cobfzp.jpg",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobfzp.jpg",
         "platforms": [
             "PC",
             "PlayStation 4",
@@ -88,29 +110,28 @@
             "Nintendo Switch",
             "macOS",
             "Linux"
-        ]
+        ],
+        "genre": ["Metroidvania", "Action-Adventure", "Platformer"],
+        "description": "Descend into the ruined insect kingdom of Hallownest, battling infected creatures, befriending bizarre bugs, and uncovering ancient mysteries in a hand-drawn 2D world."
     },
     {
         "id": 9,
         "name": "Baldur's Gate 3",
         "rating": 4.9,
         "releasedDate": "2023-08-03",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/co670h.jpg",
-        "platforms": ["PC", "PlayStation 5", "Xbox Series X/S", "macOS"]
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.jpg",
+        "platforms": ["PC", "PlayStation 5", "Xbox Series X/S", "macOS"],
+        "genre": ["CRPG", "Turn-Based Strategy", "Fantasy"],
+        "description": "Gather your party and return to the Forgotten Realms in a story-rich Dungeons & Dragons RPG driven by tactical turn-based combat, deep companionship, and player choice."
     },
     {
         "id": 10,
-        "name": "Persona 5 Royal",
+        "name": "The Witcher 3: Wild Hunt",
         "rating": 4.8,
-        "releasedDate": "2019-10-31",
-        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/coclf1.jpg",
-        "platforms": [
-            "PC",
-            "PlayStation 4",
-            "PlayStation 5",
-            "Xbox One",
-            "Xbox Series X/S",
-            "Nintendo Switch"
-        ]
+        "releasedDate": "2015-05-19",
+        "backgroundImage": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaarl.jpg",
+        "platforms": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"],
+        "genre": ["Action RPG", "Open World", "Adventure"],
+        "description": "Play as Geralt of Rivia, a monster slayer for hire, searching for his adopted daughter across a war-torn fantasy world filled with moral choices and perilous quests."
     }
 ]

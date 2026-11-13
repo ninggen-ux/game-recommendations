@@ -15,6 +15,8 @@ export default class GameList extends Component {
                         releasedDate,
                         backgroundImage,
                         platforms,
+                        genre,
+                        description,
                     }) => {
                         return (
                             <GameCard
@@ -24,6 +26,8 @@ export default class GameList extends Component {
                                 releasedDate={releasedDate}
                                 backgroundImage={backgroundImage}
                                 platforms={platforms}
+                                genre={genre}
+                                description={description}
                             />
                         );
                     },
