@@ -11,7 +11,7 @@ interface AppState {
 }
 
 // Ganti dengan URL endpoint API dari teman Anda
-const GAME_SEARCH_API_URL = "http://localhost:3000/api/games/search";
+const GAME_SEARCH_API_URL = "http://localhost:3000/api/recommend";
 
 export default class App extends Component<Record<string, never>, AppState> {
     private abortController: AbortController | null = null;
