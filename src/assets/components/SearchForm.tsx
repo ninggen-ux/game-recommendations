@@ -356,12 +356,13 @@ export default class SearchForm extends Component<
                     <div className="search-form__bottom-row">
                         <div className="search-form__field search-form__field--date">
                             <label htmlFor="game-release-date">
-                                Tanggal Rilis Game
+                                Rentan Tahun Rilis
                             </label>
                             <input
                                 id="game-release-date"
-                                type="date"
+                                type="text"
                                 value={releasedDate}
+                                placeholder="Contoh: 2000 - 2010"
                                 onChange={(e) =>
                                     this.setState({
                                         releasedDate: e.target.value,
