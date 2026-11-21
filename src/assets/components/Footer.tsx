@@ -23,13 +23,13 @@ export default class Footer extends Component {
                                 <p>
                                     <span>Gmail:</span>{" "}
                                     <a href="mailto:emailanda@gmail.com">
-                                        emailanda@gmail.com
+                                        tangkawarowandika@gmail.com
                                     </a>
                                 </p>
                                 <p>
                                     <span>Telepon:</span>{" "}
                                     <a href="tel:+6281234567890">
-                                        +62 812-3456-7890
+                                        +62 887-4472-8288
                                     </a>
                                 </p>
                             </div>
