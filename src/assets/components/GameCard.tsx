@@ -1,4 +1,4 @@
-import { Component, type ReactNode } from "react";
+import { Component, type KeyboardEvent, type ReactNode } from "react";
 import "../scss/game-list.scss";
 
 interface GameCardProps {
@@ -9,6 +9,7 @@ interface GameCardProps {
     platforms: string[];
     genre: string[];
     description: string;
+    onClick?: () => void;
 }
 
 export default class GameCard extends Component<GameCardProps> {
@@ -28,6 +29,13 @@ export default class GameCard extends Component<GameCardProps> {
         }).format(parsedDate);
     }
 
+    private handleKeyDown = (e: KeyboardEvent<HTMLDivElement>): void => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            this.props.onClick?.();
+        }
+    };
+
     render(): ReactNode {
         const {
             name,
@@ -37,10 +45,17 @@ export default class GameCard extends Component<GameCardProps> {
             platforms,
             genre = [],
             description,
+            onClick,
         } = this.props;
 
         return (
-            <div className="game-card">
+            <div
+                className="game-card"
+                role="button"
+                tabIndex={0}
+                onClick={onClick}
+                onKeyDown={this.handleKeyDown}
+            >
                 <img src={backgroundImage} alt={name} />
                 <div className="game-card__description">
                     <h1>{name}</h1>

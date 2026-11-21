@@ -352,7 +352,7 @@ export default class SearchForm extends Component<
                         </div>
                     </div>
 
-                    {/* Tanggal Rilis & Tombol Aksi */}
+                    {/* Rentan Tahun Rilis & Tombol Aksi */}
                     <div className="search-form__bottom-row">
                         <div className="search-form__field search-form__field--date">
                             <label htmlFor="game-release-date">

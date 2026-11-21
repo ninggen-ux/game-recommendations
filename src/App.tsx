@@ -1,6 +1,8 @@
 import { Component, type ReactNode } from "react";
 import GameList, { type Game } from "./assets/components/GameList";
 import SearchForm, { type SearchFilters } from "./assets/components/SearchForm";
+import Header from "./assets/components/Header";
+import Footer from "./assets/components/Footer";
 import "./assets/scss/app.scss";
 
 interface AppState {
@@ -10,7 +12,6 @@ interface AppState {
     hasSearched: boolean;
 }
 
-// Ganti dengan URL endpoint API dari teman Anda
 const GAME_SEARCH_API_URL = "http://localhost:3000/api/recommend";
 
 export default class App extends Component<Record<string, never>, AppState> {
@@ -30,10 +31,6 @@ export default class App extends Component<Record<string, never>, AppState> {
         this.abortController?.abort();
     }
 
-    /**
-     * Menyesuaikan struktur JSON dari API teman Anda agar cocok dengan props GameCard.
-     * Sesuaikan nama field di bawah jika key dari API berbeda (misal snake_case).
-     */
     private normalizeGames(rawResponse: unknown): Game[] {
         const list = Array.isArray(rawResponse)
             ? rawResponse
@@ -80,8 +77,6 @@ export default class App extends Component<Record<string, never>, AppState> {
         });
 
         try {
-            // Menggunakan POST dengan JSON body.
-            // (Jika API teman Anda memakai GET query params, lihat catatan di bawah)
             const response = await fetch(GAME_SEARCH_API_URL, {
                 method: "POST",
                 headers: {
@@ -98,7 +93,7 @@ export default class App extends Component<Record<string, never>, AppState> {
 
             if (!response.ok) {
                 throw new Error(
-                    `Gagal mengambil data game (Status: ${response.status})`,
+                    `Model ini sedang mengalami permintaan yang tinggi. Lonjakan permintaan biasanya bersifat sementara. Silakan coba lagi nanti (Status: ${response.status})`,
                 );
             }
 
@@ -137,18 +132,22 @@ export default class App extends Component<Record<string, never>, AppState> {
         const { games, isLoading, error, hasSearched } = this.state;
 
         return (
-            <main>
-                <SearchForm
-                    onSearch={this.handleSearch}
-                    onReset={this.handleReset}
-                />
-                <GameList
-                    games={games}
-                    isLoading={isLoading}
-                    error={error}
-                    hasSearched={hasSearched}
-                />
-            </main>
+            <div className="app-layout">
+                <Header />
+                <main>
+                    <SearchForm
+                        onSearch={this.handleSearch}
+                        onReset={this.handleReset}
+                    />
+                    <GameList
+                        games={games}
+                        isLoading={isLoading}
+                        error={error}
+                        hasSearched={hasSearched}
+                    />
+                </main>
+                <Footer />
+            </div>
         );
     }
 }

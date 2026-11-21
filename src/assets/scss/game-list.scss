@@ -50,6 +50,7 @@ section {
         display: flex;
         gap: 1rem;
         background-color: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.07);
         border-radius: 6px;
         overflow: hidden;
         color: var(--text-primary);
@@ -57,6 +58,7 @@ section {
         transition:
             transform 0.25s ease,
             box-shadow 0.25s ease,
+            border-color 0.25s ease,
             background-color 0.25s ease;
         cursor: pointer;
 
@@ -64,6 +66,11 @@ section {
             &:hover {
                 transform: translateY(-6px);
                 background-color: var(--card-bg-hover);
+                border-color: color-mix(
+                    in srgb,
+                    var(--accent-rating) 45%,
+                    transparent
+                );
                 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
 
                 > img {
@@ -76,8 +83,13 @@ section {
                 }
 
                 .game-card__genre-tag {
-                    border-color: rgba(255, 255, 255, 0.2);
-                    background-color: rgba(255, 255, 255, 0.06);
+                    color: #bae6fd;
+                    border-color: color-mix(
+                        in srgb,
+                        var(--accent-rating) 40%,
+                        transparent
+                    );
+                    background-color: var(--accent-soft);
                 }
             }
         }

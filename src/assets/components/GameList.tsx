@@ -1,5 +1,6 @@
 import { Component, type ReactNode } from "react";
 import GameCard from "./GameCard";
+import GameDetailModal from "./GameDetailModal";
 import "../scss/game-list.scss";
 
 export interface Game {
@@ -20,9 +21,29 @@ interface GameListProps {
     hasSearched: boolean;
 }
 
-export default class GameList extends Component<GameListProps> {
+interface GameListState {
+    selectedGame: Game | null;
+}
+
+export default class GameList extends Component<GameListProps, GameListState> {
+    constructor(props: GameListProps) {
+        super(props);
+        this.state = {
+            selectedGame: null,
+        };
+    }
+
+    private handleSelectGame = (game: Game): void => {
+        this.setState({ selectedGame: game });
+    };
+
+    private handleCloseModal = (): void => {
+        this.setState({ selectedGame: null });
+    };
+
     render(): ReactNode {
         const { games, isLoading, error, hasSearched } = this.props;
+        const { selectedGame } = this.state;
 
         if (isLoading) {
             return (
@@ -75,28 +96,25 @@ export default class GameList extends Component<GameListProps> {
 
         return (
             <section>
-                {games.map(
-                    ({
-                        id,
-                        name,
-                        rating,
-                        releasedDate,
-                        backgroundImage,
-                        platforms,
-                        genre,
-                        description,
-                    }) => (
-                        <GameCard
-                            key={id}
-                            name={name}
-                            rating={rating}
-                            releasedDate={releasedDate}
-                            backgroundImage={backgroundImage}
-                            platforms={platforms}
-                            genre={genre}
-                            description={description}
-                        />
-                    ),
+                {games.map((game) => (
+                    <GameCard
+                        key={game.id}
+                        name={game.name}
+                        rating={game.rating}
+                        releasedDate={game.releasedDate}
+                        backgroundImage={game.backgroundImage}
+                        platforms={game.platforms}
+                        genre={game.genre}
+                        description={game.description}
+                        onClick={() => this.handleSelectGame(game)}
+                    />
+                ))}
+
+                {selectedGame && (
+                    <GameDetailModal
+                        game={selectedGame}
+                        onClose={this.handleCloseModal}
+                    />
                 )}
             </section>
         );
