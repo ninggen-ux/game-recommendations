@@ -22,7 +22,7 @@ interface ApiErrorResponse {
     message: string;
 }
 
-const GAME_SEARCH_API_URL = "http://3.107.231.213:3000/api/recommend";
+const GAME_SEARCH_API_URL = import.meta.env.VITE_GAME_SEARCH_API_URL;
 
 export default class App extends Component<Record<string, never>, AppState> {
     private abortController: AbortController | null = null;
