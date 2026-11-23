@@ -4,7 +4,9 @@
 
 ## Live Demo
 
-> <a href="https://gamespoi.netlify.app/" target="_blank">Klik di sini untuk mencoba Live Demo GamesPoi</a>
+> <a href="https://gamespoi.netlify.app/" target="_blank" rel="noopener noreferrer">
+>   Klik di sini untuk mencoba Live Demo GamesPoi
+> </a>
 
 ---
 
