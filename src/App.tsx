@@ -12,7 +12,17 @@ interface AppState {
     hasSearched: boolean;
 }
 
-const GAME_SEARCH_API_URL = "http://localhost:3000/api/recommend";
+interface ApiSuccessResponse {
+    success: true;
+    data: unknown;
+}
+
+interface ApiErrorResponse {
+    success: false;
+    message: string;
+}
+
+const GAME_SEARCH_API_URL = "http://3.107.231.213:3000/api/recommend";
 
 export default class App extends Component<Record<string, never>, AppState> {
     private abortController: AbortController | null = null;
@@ -91,13 +101,16 @@ export default class App extends Component<Record<string, never>, AppState> {
                 signal: controller.signal,
             });
 
-            if (!response.ok) {
-                throw new Error(
-                    `Model ini sedang mengalami permintaan yang tinggi. Lonjakan permintaan biasanya bersifat sementara. Silakan coba lagi nanti (Status: ${response.status})`,
-                );
+            const rawData: ApiSuccessResponse | ApiErrorResponse =
+                await response.json();
+
+            if (!response.ok || !rawData.success) {
+                const errorMessage = !rawData.success
+                    ? `Terjadi Kesalahan ${rawData.message} (Status: ${response.status})`
+                    : "Terjadi kesalahan pada server";
+                throw new Error(errorMessage);
             }
 
-            const rawData: unknown = await response.json();
             const normalizedGames = this.normalizeGames(rawData);
 
             this.setState({
@@ -112,7 +125,7 @@ export default class App extends Component<Record<string, never>, AppState> {
                 isLoading: false,
                 error:
                     err instanceof Error
-                        ? err.message
+                        ? `Terjadi Kesalahan ${err.message})`
                         : "Terjadi kesalahan saat menghubungi server API.",
             });
         }
