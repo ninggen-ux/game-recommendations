@@ -106,7 +106,7 @@ export default class App extends Component<Record<string, never>, AppState> {
 
             if (!response.ok || !rawData.success) {
                 const errorMessage = !rawData.success
-                    ? `Terjadi Kesalahan ${rawData.message} (Status: ${response.status})`
+                    ? `Terjadi Kesalahan: ${rawData.message} (Status: ${response.status})`
                     : "Terjadi kesalahan pada server";
                 throw new Error(errorMessage);
             }
